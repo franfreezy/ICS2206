@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: #FBFAF9;
@@ -16,11 +17,11 @@ body{
     background-image: url('admin-images/admin-jumbotron.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 65%;
+    width: 60%;
     height: 100vh;
 }
 .user-sign-in{
-    width: 35%;
+    width: 40%;
     margin-top: 40px;
 }
 .scale-in-center {

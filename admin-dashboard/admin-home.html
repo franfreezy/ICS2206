@@ -18,21 +18,48 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">
-            <h2><a href="index.html">Savannah Agile Solutions</a></h2>            
+            <h2><a href="admin-home.html">Savannah Agile Solutions</a></h2>            
         </div>
         <div class="dropdown">
           <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user"></i>Account
+            <i class="fa-solid fa-user"></i>Hi, admin
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item hm-sgn-in" href="#">Sign In</a></li>
-            <li><hr class="dropdown-divider"></li>
+          <ul class="dropdown-menu">            
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
-            <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center" href="#"><i class="fa-solid fa-power-off"></i>Sign Out</a></li>
           </ul>
         </div>
     </nav>
+    <!-- Admin Page -->
+    <main>
+        <!-- Aside Bar -->
+        <aside>
+            <div class="aside-title">
+                <a href="admin-home.html"><i class="fa-solid fa-house"></i>Dashboard</a>
+            </div>
+            <ul class="aside-list">
+                <li><a href="#"><i class="fa-solid fa-people-group"></i>Staff Members</a></li>
+                <li><a href="#"><i class="fa-solid fa-network-wired"></i>Departments</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Reports</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-group"></i>Users</a></li>
+            </ul>
+        </aside>
+        <!-- Admin Content -->
+        <div class="admin-dashboard">
+            <div class="admin-welcome">
+                <h2>Welcome!</h2>
+            </div>
+            <div class="admin-profile">
+                <img src="admin-assets/admin-images/admin-profile.png" alt="admin-profile">
+            </div>
+            <div class="admin-info">
+                <h5>Catherine Devourax</h5>
+                <p>System Administrator</p>
+                <span>Jomo Kenyatta University</span>
+            </div>
+        </div>
+    </main>
 
     <!-- Js Links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

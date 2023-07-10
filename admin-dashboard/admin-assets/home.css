@@ -3,38 +3,136 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #fff;
 }
 /** Navigation Bar **/
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     min-height: 8vh;
-    background-color: #FCEDDA;
+    background-color: #001233;
+    padding: 0px 25px;
+    /* position: sticky;
+    top: 0; */
 }
 .logo{
-    color: #EE4E34;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;    
+    letter-spacing: 2px;
+    font-size: 16px;    
+}
+.logo h2{
+    font-size: 18px;
 }
 .logo a{
     text-decoration: none;
-    color: #EE4E34;
+    color: #fff;
     cursor: pointer;
 }
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-}
-.nav-links a{
-    color: #EE4E34;
+.dropdown-toggle{
     text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 14px;
+    color: #fff;
 }
-.nav-links li{
-    list-style: none;
+.fa-user, .fa-power-off{
+    margin-right: 7px;
+}
+
+/* Admin Page */
+main{
+    display: flex;
+    min-height: 94vh;
+}
+aside{
+    width: 20%;
+    background-color: #001233;   
+    overflow-y: auto;
+    transition: all 0.3s;
+    min-height: 100vh;
+    /* position: fixed;
+    top: 8vh; */
+}
+.aside-title{
+    margin-top: 15px;
+    padding: 0 10px;
+    text-align: center;
+    font-weight: 900; 
+    position: relative;
+    margin-bottom: 20px;
+}
+.aside-title a{
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.aside-title a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 40px;
+    height: 2px;
+    left: 45%;
+    margin-top: 10px;
+}
+.fa-house{
+    margin-right: 7px;
+}
+ul{
+    padding-left: 0;
+    margin-left: 12px;
+}
+.aside-list{
+    list-style:none;
+}
+.aside-list li{
+    padding: 15px 0;
+}
+.aside-list li:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.aside-list li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 0;
+}
+.aside-list a{
+    font-size: 18px;    
+}
+.fa-people-group, .fa-network-wired,
+.fa-chart-simple, .fa-user-group{
+    margin-right: 7px;
+}
+.admin-dashboard{
+    width: 80%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    border: 2px solid gold;
+}
+.admin-welcome h2{
+    letter-spacing: 1px;
+}
+.admin-profile img{
+    height: 200px;
+    border-radius: 50%;
+
+}
+.admin-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.admin-info h5{
+    margin-bottom: 4px;
+}
+.admin-info p{
+    margin-bottom: 2px;
 }
