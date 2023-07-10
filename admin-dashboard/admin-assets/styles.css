@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FBFAF9;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.hero-section{
+    background-image: url('admin-images/admin-jumbotron.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 100vh;
+}
+.user-sign-in{
+    width: 35%;
+    margin-top: 40px;
+}
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    transition: all 0.5s ease-in-out;
+}
+.company-logo{
+    text-align: center;    
+}
+.company-logo img{
+    height: 100px;    
+}
+.logo-img{
+    text-align: center;
+}
+.logo-img img{
+    height: 100px;   
+}
+
+/* Sign in form */
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.title{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.input-field{
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    background-color: #f0f0f0;
+}
+.input-field span{
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2rem;
+    color: #acacac;
+    font-weight: 500;
+}
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+}
+#file{
+    align-items: center;
+}
+.input-field input::placeholder{
+    color: #aaa;
+    font-weight: 600;
+}
+/** Password Toggler **/
+#password-container{
+    width: 100%;
+    position: relative;
+}
+.fa-eye-slash, .fa-eye{
+    position: absolute;
+    top: 28%;
+    right: 3%;
+    cursor: pointer;    
+    font-size: 1.2rem;
+    color: #acacac;
+    font-weight: 500;
+}
+.fa-eye{
+    display: none;
+}
+.btn {
+    width: 200px;
+    background-color: #4481eb;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+} 
+.btn:hover {
+    background-color: #4481eb;
+    transform: scale(1.01);
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
