@@ -8,7 +8,8 @@
 body{
     background-color: #fff;
 }
-/** Navigation Bar **/
+
+/* Navigation Bar */
 nav{
     display: flex;
     justify-content: space-between;
@@ -137,6 +138,7 @@ ul{
 .admin-info p{
     margin-bottom: 2px;
 }
+
 /* Staff Members */
 .staff-members{
     margin: 2% 2%;
@@ -188,6 +190,7 @@ td {
 .actions a{
     margin-left: 7px;
 }
+
 /* Departments */
 .department{
     display: flex;
@@ -296,7 +299,115 @@ form{
     margin-left: 7px;
 }
 
-   
+/* Allowances */
+.allowances{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 2% 2%;
+    width: 100%;
+}
+.allowances-form{
+    width: 30%;
+    min-width: 400px;
+}
+form{
+    padding: 0 !important;
+}
+.allowances-form h2{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+}
+.allowances form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.allowances form label{
+    margin: 5px;   
+}
+.all-name{
+    min-width: 350px;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+}
+.all-amt{
+    min-width: 350px;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+}
+.allowance-table{
+    width: 50%;
+}
+
+/* Deductions */
+.deductions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 2% 2%;
+    width: 100%;
+}
+.deduction-form{
+    width: 40%;
+    min-width: 400px;
+}
+form{
+    padding: 0 !important;
+}
+.deduction-form h2{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+}
+.deduction form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.deduction form label{
+    margin: 5px;   
+}
+.dd-name{
+    min-width: 350px;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+}
+.deduction-table{
+    width: 40%;
+}
+.d-fx{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+    border: 1px solid #ddd;
+}
+.d-table{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 /* Footer */
 footer {
     display: flex;

@@ -11,35 +11,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <title>Admin | Departments</title>
+    <title>Admin | Allowances</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.png"/>
   </head>
 <body>
     <!-- Department List -->
-    <div class="department">
-        <div class="department-form">
-            <h2>Department Form</h2>
+    <div class="allowances">
+        <div class="allowances-form">
+            <h2>Allowance Form</h2>
             <form action="" method="">
-                <label for="Department name">Department: </label>
-                <input type="text" name="dpt-name" id="dpt-name" class="dpt-name" placeholder="Department Name">
+                <label for="Allowance name">Allowance: </label>
+                <input type="text" name="all-name" id="all-name" class="all-name" placeholder="Allowance Name">
+                <label for="Allowance amount">Amount: </label>
+                <input type="number" name="all-amt" id="all-amt" class="all-amt" placeholder="Allowance Amount">
                 <div class="d-flex">
                     <input type="reset" name="dpt-clear" id="dpt-clear" class="btn-clear">
                     <input type="submit" name="dpt-submit" id="dpt-submit" class="btn-submit">                    
                 </div>
             </form>
         </div>
-        <div class="department-table">
+        <div class="allowance-table">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr class="">
                       <th></th>
-                      <th>Departments</th>                                  
+                      <th>Allowance</th>                                  
+                      <th>Allowance Amount</th>                                  
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Human Resource Department</td>                                       
+                        <td>Housing Allowance</td>                                       
+                        <td>Ksh. 9999.99</td>                                       
                         <td class="actions-1">
                             <div><i class="fa-solid fa-pen-to-square"></i><a href="#">Edit</a></div>
                             <div><i class="fa-solid fa-trash"></i><a href="#">Delete</a></div>
@@ -47,20 +51,13 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>IT Department</td>                                       
+                        <td>Transport Allowance</td>                                       
+                        <td>Ksh. 9999.99</td>                                       
                         <td class="actions-1">
                             <div><i class="fa-solid fa-pen-to-square"></i><a href="#">Edit</a></div>
                             <div><i class="fa-solid fa-trash"></i><a href="#">Delete</a></div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Account and Finance Department</td>                                       
-                        <td class="actions-1">
-                            <div><i class="fa-solid fa-pen-to-square"></i><a href="#">Edit</a></div>
-                            <div><i class="fa-solid fa-trash"></i><a href="#">Delete</a></div>
-                        </td>
-                    </tr>                                        
+                    </tr>                                       
                 </tbody>
             </table>
         </div>
