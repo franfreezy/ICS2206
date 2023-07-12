@@ -15,76 +15,166 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.png"/>
   </head>
 <body>
-    <!-- Deductions List -->
-    <div class="deductions">
-        <div class="deduction-form">
-            <h2>Deduction Form</h2>
-            <form action="" method="">
-                <table class="table table-bordered table-striped d-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Monthly Gross Income (Ksh)</th>
-                            <th>Rates Per Month (Ksh)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>0 - 5,999</td>
-                            <td>150</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>6,000 - 7,999</td>
-                            <td>300</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>8,000 - 11,999</td>
-                            <td>400</td>
-                        </tr> 
-                        <tr>
-                            <td>4</td>
-                            <td>12,000 - 14,999</td>
-                            <td>400</td>
-                        </tr>                       
-                    </tbody>
-                </table>
-                <div class="d-fx">
-                    <input type="reset" name="dd-clear" id="dd-clear" class="btn-clear">
-                    <input type="submit" name="dd-submit" id="dd-submit" class="btn-submit">                    
-                </div>
-            </form>
-        </div>
-        <div class="deduction-table">
+    <!-- Payroll List -->
+    <div class="payroll">
+        <div class="payroll-table">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr class="">
-                      <th></th>
-                      <th>Deduction</th>                                                                   
+                      <th>Ref No.</th>
+                      <th>From - To</th>
+                      <th>Employee ID</th>
+                      <th>Name</th>
+                      <th>Gross Pay (Ksh.)</th>
+                      <th>Allowances (Ksh.)</th>
+                      <th>Deductions (Ksh.)</th>
+                      <th>Net Pay (Ksh.)</th>
+                      <th></th>                                                                  
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Pay As Your Earn (PAYE)</td>                                                                             
-                        <td class="actions-1">
-                            <div><i class="fa-solid fa-pen-to-square"></i><a href="#">Edit</a></div>
-                            <div><i class="fa-solid fa-trash"></i><a href="#">Delete</a></div>
+                        <td>2023-KBYT-JKUAT</td>
+                        <td>2/1/23 - 2/2/23</td>
+                        <td>SNM-00000</td>
+                        <td>Godiah Moses</td>
+                        <td>100,000.00</td>
+                        <td>9,500.00</td>
+                        <td>18,750.00</td>
+                        <td><strong>109,750.00</strong></td>                                                                             
+                        <td class="actions-2">
+                            <div><a href="#divMain"><i class="fa-solid fa-eye"></i> View</a></div>                            
                         </td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>National Health Insurance Fund (NHIF)</td>                                       
-                        <td class="actions-1">
-                            <div><i class="fa-solid fa-pen-to-square"></i><a href="#">Edit</a></div>
-                            <div><i class="fa-solid fa-trash"></i><a href="#">Delete</a></div>
+                        <td>2023-KBYT-JKUAT</td>
+                        <td>2/1/23 - 2/2/23</td>
+                        <td>SNM-00000</td>
+                        <td>Godiah Moses</td>
+                        <td>100,000.00</td>
+                        <td>9,500.00</td>
+                        <td>18,750.00</td>
+                        <td><strong>109,750.00</strong></td>                                                                             
+                        <td class="actions-2">
+                            <div><a href="#"><i class="fa-solid fa-eye"></i> View</a></div>                            
                         </td>
-                    </tr>                                       
+                    </tr>                   
+                    <tr>
+                        <td>2023-KBYT-JKUAT</td>
+                        <td>2/1/23 - 2/2/23</td>
+                        <td>SNM-00000</td>
+                        <td>Godiah Moses</td>
+                        <td>100,000.00</td>
+                        <td>9,500.00</td>
+                        <td>18,750.00</td>
+                        <td><strong>109,750.00</strong></td>                                                                             
+                        <td class="actions-2">
+                            <div><a href="#"><i class="fa-solid fa-eye"></i> View</a></div>                            
+                        </td>
+                    </tr>                                                         
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <!-- Payslip -->
+    <div class="overlay" id="#divMain">
+        <div class="wrapper">
+            <div class="payslip-title">
+                <h1>Employee Payslip</h1>
+            </div>
+            <div class="employee-details">
+                <label for="Employee ID">Employee ID : <b>SMN-00001</b></label><br>
+                <label for="Employee Name">Employee Name : <b>Godiah Moses</b></label>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="payslip-info">                    
+                        <tbody>
+                            <tr >
+                                <td class="slip-info">Payroll Reference No. :</td>
+                                <td class="slip-info">YBK-20004K</td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">Date :</td>
+                                <td class="slip-info">2/2/2023 - 2/3/2023</td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">National ID :</td>
+                                <td class="slip-info">37934384</td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">Department :</td>
+                                <td class="slip-info">IT Department</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-1 border"></div>
+                <div class="col-md-5">
+                    <table class="payslip-info">
+                        <tbody>
+                            <tr>
+                                <td class="slip-info">Gross Pay :</td>
+                                <td class="slip-info"><strong><sup>Ksh</sup>100,000.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">Allowances :</td>
+                                <td class="slip-info"><strong><sup>Ksh</sup>7,000.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">Deductions :</td>
+                                <td class="slip-info"><strong><sup>Ksh</sup>10,000.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="slip-info">Net Pay :</td>
+                                <td class="slip-info"><strong><sup>Ksh</sup>97,000.00</strong></td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="calculations">
+                <div class="slip-allowance">
+                    <div class="crd-hdr">
+						<h2>Allowances</h2>						
+					</div>
+                    <ul class="list-grp">
+						<li class="list-grp-item"> House Allowance
+					    <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					    </li>						  
+						<li class="list-grp-item"> Transport Allowance
+					    <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					    </li>
+                        <li class="list-grp-item"> Health Allowance
+					    <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					    </li>						  
+					</ul>
+                </div>
+                <div class="slip-deduction">
+                    <div class="crd-hdr">
+						<h2>Deductions</h2>						
+					</div>
+                        <ul class="list-grp">
+						    <li class="list-grp-item"> PAYE
+					        <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					        </li>						  
+						    <li class="list-grp-item"> NHIF
+					        <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					        </li>
+                            <li class="list-grp-item"> NSSF
+					        <span class="badge rounded-pill text-bg-primary">Ksh.1,500</span>
+					        </li>						  
+					    </ul>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="btn-options">
+                <a href="#" class="print"><i class="fa-solid fa-print"></i>Print</a>
+                <a href="#" class="close">Close</a>
+            </div>
+        </div>            
     </div>
 </body>
 </html>

@@ -107,7 +107,7 @@ ul{
 .fa-people-group, .fa-network-wired,
 .fa-chart-simple, .fa-user-group, .fa-landmark
 , .fa-sack-dollar, .fa-cash-register,
-.fa-file-invoice{
+.fa-file-invoice, .fa-print{
     margin-right: 7px;
 }
 .admin-dashboard{
@@ -407,6 +407,181 @@ form{
 .d-table{
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+/* Payroll */
+.payroll{
+    display: flex;
+    margin: 2% 2%;
+    width: 100%;
+}
+.actions-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.actions-2 a{
+    margin-left: 7px;
+    text-decoration: none;
+}
+
+/* Payslip */
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* transition:ease-in 500ms; */
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+.wrapper{
+    position: relative;
+    margin: 20px auto;
+    padding: 15px;
+    width: 70%;
+    transition: 0.5s ease-in-out;
+}
+.payslip-title{
+    border-bottom: 2px solid #ddd;
+}
+.payslip-title h1{
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 2px;
+    padding-bottom: 7px;
+}
+.employee-details{
+    padding: 7px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+.payslip-info{
+    border: none !important;
+}
+.slip-info{
+    text-align: left !important;
+    border: none;
+}
+.border{
+    width: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+.divider{
+    border-bottom: 2px solid #ddd;
+    margin-top: 10px;
+}
+.calculations{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 0;
+}
+.slip-allowance{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 50%;
+}
+.crd-hdr{
+    border-bottom: 1px solid #ddd;
+    background-color: #F7F7F7;
+}
+.crd-hdr h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-top: 8px;
+}
+.list-grp{
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 0;    
+}
+.list-grp-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+    margin-bottom: 2px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+}
+.badge{
+    font-size: 13px;
+    padding: 10px;
+}
+.slip-deduction{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 50%;
+}
+.btn-options{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.btn-options a{
+    text-decoration: none;
+}
+.close{
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:14px;
+	padding:8px 28px;
+    margin-left: 5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.close:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.close:active {
+	position:relative;
+	top:1px;
+}
+.print{
+	box-shadow:inset 0px 1px 0px 0px #54f77d;
+	background:linear-gradient(to bottom, #10c100 5%, #00a700 100%);
+	background-color:#10c100;
+	border-radius:3px;
+	border:1px solid #10c100;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:14px;
+	padding:8px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #15821b;
+}
+.print:hover {
+	background:linear-gradient(to bottom, #80db64 5%, #14ce2d 100%);
+	background-color:#23df52f5;
+}
+.print:active {
+	position:relative;
+	top:1px;
 }
 /* Footer */
 footer {
