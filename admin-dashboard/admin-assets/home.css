@@ -104,7 +104,9 @@ ul{
     font-size: 18px;    
 }
 .fa-people-group, .fa-network-wired,
-.fa-chart-simple, .fa-user-group{
+.fa-chart-simple, .fa-user-group, .fa-landmark
+, .fa-sack-dollar, .fa-cash-register,
+.fa-file-invoice{
     margin-right: 7px;
 }
 .admin-dashboard{
@@ -186,6 +188,115 @@ td {
 .actions a{
     margin-left: 7px;
 }
+/* Departments */
+.department{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 2% 2%;
+    width: 100%;
+}
+.department-form{
+    width: 40%;
+    min-width: 400px;
+}
+form{
+    padding: 0 !important;
+}
+.department-form h2{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+}
+.department form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.department form label{
+    margin: 5px;   
+}
+.dpt-name{
+    min-width: 350px;
+    height: 40px;
+    outline: none;
+
+    padding-left: 5px;
+}
+.d-flex{
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+    border: 1px solid #ddd;
+}
+.btn-submit{
+	background-color:#44c767;
+	border-radius:6px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding:6px 24px;
+    margin-left: 5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.btn-submit:hover {
+	background-color:#5cbf2a;
+}
+.btn-submit:active {
+	position:relative;
+	top:1px;
+}
+.btn-clear{
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+    margin-right: 5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.btn-clear:hover{
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.btn-clear:active{
+	position:relative;
+	top:1px;
+}
+.department-table{
+    width: 50%;
+}
+.actions-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.actions-1 a{
+    margin-left: 7px;
+}
+
+   
 /* Footer */
 footer {
     display: flex;
