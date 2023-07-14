@@ -426,21 +426,21 @@ form{
 }
 
 /* Payslip */
-.overlay{
+/* .overlay{
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
-    /* transition:ease-in 500ms; */
+    transition:ease-in 500ms;
     visibility: hidden;
     opacity: 0;
 }
 .overlay:target{
     visibility: visible;
     opacity: 1;
-}
+} */
 .wrapper{
     position: relative;
     margin: 20px auto;
@@ -467,6 +467,10 @@ form{
     border: none !important;
 }
 .slip-info{
+    text-align: right !important;
+    border: none;
+}
+.slip-info-2{
     text-align: left !important;
     border: none;
 }
