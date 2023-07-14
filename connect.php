@@ -1,5 +1,6 @@
 
-<?
+<?php
+
     $hostname = 'localhost';
     $user = 'root';
     $pword = '';

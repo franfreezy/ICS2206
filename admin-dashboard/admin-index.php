@@ -1,3 +1,6 @@
+<?php  
+    require('../connect.php'); 
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,8 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.png"/>
   </head>
 <body>
+
+
     <!-- Company Name & Logo -->
     <div class="main-section">
         <div class="hero-section"></div>
@@ -36,12 +41,12 @@
                                 <!-- Username -->
                                 <div class="input-field">
                                     <span><i class="fa-solid fa-user"></i></span>
-                                    <input type="text" name="user_username" id="" placeholder="Username" required autocomplete="off">
+                                    <input type="text" name="admin_username" id="" placeholder="Username" required autocomplete="off">
                                 </div>            
                                 <!-- Password -->
                                 <div class="input-field" id="password-container">
                                     <span><i class="fa-solid fa-lock"></i></span>
-                                    <input type="password" name="userpassword" id="password" placeholder="Password" required>
+                                    <input type="password" name="admin_password" id="password" placeholder="Password" required>
                                     <div id="show-password"><i class="fa-solid fa-eye-slash"></i><i class="fa-solid fa-eye"></i></div>                                                        
                                 </div>
                                 <div class="reset-password">
@@ -51,7 +56,7 @@
                                 <input type="submit" name="btn-signin" id="signin" class="btn solid" value="Sign In">                
                                 <div class="d-flex">
                                     <p class="mx-1">Don't have an account yet? </p>
-                                    <a href="#"> Sign Up</a>
+                                    <a href="admin-register.php"> Sign Up</a>
                                 </div>
                             </form>
                         </div>
