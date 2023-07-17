@@ -21,8 +21,9 @@
 include('../connect.php');
 global $conn;
 if(isset($_POST['btn-signup'])){
-  $username = $_POST['admin_username'];
+  $username = $_POST['admin_username'];  
   $userpassword = $_POST['admin_password'];
+  $harshpassword = password_hash($userpassword,PASSWORD_DEFAULT);
 
   //select data from dB
   $select_query = "Select * from `admin_login` where username='$username'";
@@ -32,7 +33,7 @@ if(isset($_POST['btn-signup'])){
     echo "<script>alert('Username already exists')</script>";
     
   }else{
-    $insert_query = "insert into `admin_login` (username) values ('$username')";
+    $insert_query = "insert into `admin_login` (username, password) values ('$username','$harshpassword')";
     $result = mysqli_query($conn,$insert_query);
     if($result){
       echo "<script>alert('User added successfully')</script>";
