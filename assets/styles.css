@@ -153,6 +153,13 @@ form{
   }
 }
 
+/* Registration Form */
+div.col.form-floating{
+    outline: none !important;
+}
+#ff{
+    outline: none   !important;
+}
 
 
 

@@ -54,7 +54,7 @@
                                 <input type="submit" name="btn-signin" id="signin" class="btn solid" value="Sign In">                
                                 <div class="d-flex">
                                     <p class="mx-1">Don't have an account yet? </p>
-                                    <a href="#"> Sign Up</a>
+                                    <a href="sign_up.php"> Sign Up</a>
                                 </div>
                             </form>
                         </div>

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #FBFAF9;
+}
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    transition: all 0.5s ease-in-out;
+}
+.company-logo{
+    text-align: center;    
+}
+.company-logo img{
+    height: 100px;    
+}
+.logo-img{
+    text-align: center;
+}
+.logo-img img{
+    height: 100px;   
+}
+.reg-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-success{
+    width: 350px;    
+}
+.message-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.divider{
+    margin-top: 0;
+}
+.msg-title{
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0;
+}
+.msg-tool{
+    font-size: 16px;
+    color: red;
+}
+.form-title{
+    letter-spacing: .8px;
+    font-size: 1.8rem;
+    position: relative;
+}
+.form-title::after{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: black;
+    left: 50%;
+    top: 40px;
+    width: 30px;
+    height: 2px;
+}
