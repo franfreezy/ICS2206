@@ -180,44 +180,28 @@ th, td{
     align-items: center;
     justify-content: space-evenly;
 }
-/* input[type="checkbox"]{
-    display: none;
-} */
-/* .wrapper{
-    display: none;
+.btn{
+    padding: 0;
+}
+.btn:nth-child(2){
+    padding-left: 2px;
+}
+.wrapper{
     background: #fff;
-    width: 410px;
-    padding: 30px;
+    width: 70%;
+    padding: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#show:checked ~ .wrapper{
-    display: block;
-} */
-/* .overlay{
-    position: fixed;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition:ease-in 500ms;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
-    opacity: 0;
+    transition: transform 0.4s, top 0.4s;
 }
-.overlay:target{
+.open-popup{
     visibility: visible;
-    opacity: 1;
-} */
-.wrapper{
-    position: relative;
-    margin: 20px auto;
-    padding: 15px;
-    width: 70%;
-    transition: 0.5s ease-in-out;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
 .payslip-title{
     border-bottom: 2px solid #ddd;
@@ -236,6 +220,15 @@ th, td{
 }
 .payslip-info{
     border: none !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+.payslip-info2{
+    border: none !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
 }
 .slip-info{
     text-align: right !important;

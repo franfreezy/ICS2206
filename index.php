@@ -17,6 +17,28 @@
 <body>
     <?php  
     require('connect.php'); 
+    session_start();
+
+    $email= isset($_POST['email']) ? $_POST['email'] : ''; 
+    $pass  = isset($_POST['password']) ? $_POST['password'] : ''; 
+    echo $email;
+
+    $employee= "SELECT * FROM `employee_login` WHERE EMAIL = '$email'";
+    $db_query  = mysqli_query($conn,$employee);
+    $row = mysqli_num_rows($db_query);
+    $assoc = mysqli_fetch_assoc($db_query);
+
+    if ($row>0){
+        if (password_verify($pass,$assoc['PASSWORD'])){
+            $user = $assoc['PASSWORD'];
+            // echo "<script>alert('Welcome $user')</script>";
+            header("Location:registration_user.php");
+        }else{
+            echo "<script>alert('Incorrect Login Details')</script>";
+            echo "<script>window.open('index.php','_self')</script>";
+            // header("Location:index.php");
+        }
+    }
     ?>
     <!-- Company Name & Logo -->
     <div class="main-section">
