@@ -11,7 +11,4 @@
      if(!$conn){
             echo  "unsuccessful" ; 
      }
-     else{
-   echo "successful";
-     }
 ?>

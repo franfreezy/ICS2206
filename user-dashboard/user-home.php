@@ -1,3 +1,8 @@
+
+<?php 
+include('../connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +11,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS Links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="admin-assets/home.css" />
+    <link rel="stylesheet" href="user-home.css" />
     <!-- Animate Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <title>Admin | Savannah Agile Solutions</title>
+    <title>Home | Savannah Agile Solutions</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.png"/>
   </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">
-            <h2><a href="admin-home.html">Savannah Agile Solutions</a></h2>            
+            <h2><a href="user-home.php">Savannah Agile Solutions</a></h2>            
         </div>
         <div class="dropdown">
           <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user"></i>Hi, admin
+            <i class="fa-solid fa-user"></i>Hi, user
           </a>
           <ul class="dropdown-menu">            
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
@@ -36,33 +41,44 @@
         <!-- Aside Bar -->
         <aside>
             <div class="aside-title">
-                <a href="admin-home.html"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <div class="prof-img">
+                    <img src="user-images/admin-profile.png" alt="profile pic">
+                </div>
+                <div class="prof-name">
+                    <h5>Lewis Hamilton</h5>
+                </div>
             </div>
-            <ul class="aside-list">
-                <li><a href="employee.html"><i class="fa-solid fa-people-group"></i>Staff Members</a></li>
-                <li><a href="departments.html"><i class="fa-solid fa-network-wired"></i>Departments</a></li>
-                <li><a href="payroll.html"><i class="fa-solid fa-landmark"></i>Payroll</a></li>
-                <li><a href="allowance.html"><i class="fa-solid fa-sack-dollar"></i>Allowances</a></li>
-                <li><a href="deductions.html"><i class="fa-solid fa-cash-register"></i>Deductions</a></li>
-                <li><a href="#"><i class="fa-solid fa-file-invoice"></i>Audit Trail</a></li>
-                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Reports</a></li>
-                <li><a href="#"><i class="fa-solid fa-user-group"></i>Users</a></li>
+            <ul class="aside-list">               
+                <li><a href="user-home.php"><i class="fa-solid fa-user"></i>My Profile</a></li>
+                <li><a href="user-home.php?bank-acc-details"><i class="fa-solid fa-landmark"></i>Bank Account</a></li>
+                <li><a href="user-home.php?salary-slip"><i class="fa-solid fa-sack-dollar"></i>Salary Slips</a></li>                
             </ul>
         </aside>
-        <!-- Admin Content -->
-        <div class="admin-dashboard">
-            <div class="admin-welcome">
-                <h2>Welcome</h2>
-            </div>
-            <div class="admin-profile">
-                <img src="admin-assets/admin-images/admin-profile.png" alt="admin-profile">
-            </div>
-            <div class="admin-info">
-                <h5>Catherine Devourax</h5>
-                <p>System Administrator</p>
-                <span>Jomo Kenyatta University</span>
-            </div>
+        <!-- Main Content Area-->
+        <div class="main-content">
+            <?php
+            if(!isset($_GET['edit-details'])){
+                if(!isset($_GET['bank-acc-details'])){
+                    if(!isset($_GET['salary-slip'])){
+                        include ('edit-details.php');
+                    }                    
+                }
+            }
+            if(isset($_GET['bank-acc-details'])){
+                include('bank-acc-details.php');
+            }    
+            if(isset($_GET['salary-slip'])){
+                include('salary-slip.php');
+            } 
+            // if(!isset($_GET['edit-details'])){
+            //     include ('edit-details.php');
+            // }
+            // if(isset($_GET['bank-acc-details'])){
+            //     include('bank-acc-details.php');
+            // }
+            ?>
         </div>
+        
     </main>
     <!-- Footer -->
     <footer>
@@ -74,6 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script src="admin-assets/script.js"></script>
+    <script src="#"></script>
 </body>
 </html>
