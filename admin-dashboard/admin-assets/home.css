@@ -296,13 +296,33 @@ form{
 	position:relative;
 	top:1px;
 }
-.actions-1{
+.table-header{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0px 15px;
 }
-.actions-1 a{
-    margin-left: 7px;
+.btn{
+    padding: 0;
+}
+.btn:nth-child(2){
+    padding-left: 2px;
+}
+.wrapper-dpt{
+    background: #fff;
+    width: 70%;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Allowances */
@@ -430,23 +450,6 @@ form{
     margin-left: 7px;
     text-decoration: none;
 }
-
-/* Payslip */
-/* .overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition:ease-in 500ms;
-    visibility: hidden;
-    opacity: 0;
-}
-.overlay:target{
-    visibility: visible;
-    opacity: 1;
-} */
 .wrapper{
     position: relative;
     margin: 20px auto;

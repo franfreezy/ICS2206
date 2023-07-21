@@ -18,6 +18,7 @@
 <?php
 include('../connect.php'); 
 global $conn;
+// Add Department to dB
 if(isset($_POST['dpt-submit'])){        
     $dept_name = $_POST['dpt-nam'];
     // Check whether the department with same name exist or not in database
@@ -35,7 +36,20 @@ if(isset($_POST['dpt-submit'])){
           echo "<script>window.open('admin-home.php?departments','_self')</script>";
         }
     }  
-}   
+}
+// Delete department form dB
+        global $conn;
+        if(isset($_POST['dept-del'])){
+            $remove_id = $_POST['removeitem'];
+            $delete_query= "Delete  from `department` where dpt_id='$remove_id'";
+            $run_delete=mysqli_query($conn,$delete_query);
+            if($run_delete){
+                echo "<script>alert('Department deleted successfully')</script>";
+                echo "<script>window.open('admin-home.php?departments','_self')</script>";
+            }else{
+                echo "fail";
+            }
+        }
 ?>
     <!-- Department List -->
     <div class="department">
@@ -43,7 +57,7 @@ if(isset($_POST['dpt-submit'])){
             <h2>Add New Department Form</h2>
             <form action="" method="post">
                 <label for="Department name">Department: </label>
-                <input type="text" name="dpt-nam" id="dpt-name" class="dpt-name" placeholder="Department Name" required>
+                <input type="text" name="dpt-nam" id="dpt-name" class="dpt-name" placeholder="Department Name" autocomplete="off" required>
                 <div class="d-flex">
                     <input type="reset" name="dpt-clear" id="dpt-clear" class="btn-clear">
                     <input type="submit" name="dpt-submit" id="dpt-submit" class="btn-submit">                    
@@ -68,12 +82,15 @@ if(isset($_POST['dpt-submit'])){
                 echo "
                 <tbody>
                     <tr>
-                    <td>$id</td>
+                    <td name='removeitem'>$id</td>
                     <td>$dpt_name</td>
-                    <td class='actions-1'>
-                        <div><a href='#'><i class='fa-solid fa-pen-to-square'></i></a></div>
-                        <div><a href='#'><i class='fa-solid fa-eye'></i></a></div>
-                        <div><a href='#'><i class='fa-solid fa-trash'></i></a></div>
+                    <td class=''>
+                        <button type='submit' class='btn' onclick='openPopup()'>
+                            <i class='show-btn fa-solid fa-eye text-primary'></i>
+                        </button>
+                        <button type='submit' class='btn' name='dept-del'>
+                            <i class='fa-solid fa-trash text-danger'></i>
+                        </button>
                     </td>
                     </tr>
                     </tbody>
@@ -83,5 +100,47 @@ if(isset($_POST['dpt-submit'])){
             </table>                                                              
         </div>
     </div>
+    <div class="wrapper-dpt" id="popup">
+        <div class="table-header">
+            <h4 class="text-center">IT Department Members</h4>
+            <button type="button" class="btn" onclick="closePopup()">
+                <i class="fa-solid fa-circle-xmark text-danger"></i>
+            </button>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <th>Staff ID</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Surname</th>
+                <th>Gender</th>
+                <th>Email Address</th>
+                <th>Date Joined</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JKUAT0067</td>
+                    <td>Arap</td>
+                    <td>Yolo</td>
+                    <td>Richard</td>
+                    <td>Male</td>
+                    <td>@gmail.com</td>
+                    <td>2/2/23</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
 </body>
 </html>
