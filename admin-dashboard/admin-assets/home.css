@@ -44,6 +44,7 @@ nav{
 main{
     display: flex;
     min-height: 94vh;
+    width: 100%;
 }
 aside{
     width: 20%;
@@ -113,9 +114,8 @@ ul{
 .admin-dashboard{
     width: 80%;    
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     padding: 30px 15px;
     margin-left: 20%;
 }
@@ -194,14 +194,18 @@ td {
 /* Departments */
 .department{
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 2% 2%;
-    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;    
+    margin: 0;
 }
 .department-form{
-    width: 40%;
-    min-width: 400px;
+    width: 50%;    
+}
+.department-table{
+    width: 50%;
+    align-items: flex-start;
 }
 form{
     padding: 0 !important;
@@ -219,9 +223,14 @@ form{
     display: flex;
     justify-content: center;
 }
+.t-head{
+    border: 1px solid #ddd;
+    background-color: #F7F7F7;
+}
 .department form{
     display: flex;
     flex-direction: column;
+    /* align-items: flex-start; */
     padding: 10px;
 }
 .department form label{
@@ -286,9 +295,6 @@ form{
 .btn-clear:active{
 	position:relative;
 	top:1px;
-}
-.department-table{
-    width: 50%;
 }
 .actions-1{
     display: flex;

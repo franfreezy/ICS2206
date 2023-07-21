@@ -31,21 +31,21 @@
     </div>
     <!-- Registration Form -->
     <div class="reg-form">
-        <form>
+        <form action="registration2.php" method="post">
         <hr class="divider">
             <!-- Full Names -->
             <div class="row g-3 mb-2">
                 <div class="col">
                     <label for="First Name">First Name</label>
-                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
                 </div>
                 <div class="col">
-                    <label for="Last Name">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    <label for="Last Name">Middlename</label>
+                    <input name="Middlename" type="text" class="form-control" placeholder="Middle Name" aria-label="Last name">
                 </div>
                 <div class="col">
                     <label for="Surname">Surname</label>
-                    <input type="text" class="form-control" placeholder="Surname" aria-label="Surname">
+                    <input name="Surname" type="text" class="form-control" placeholder="Surname" aria-label="Surname">
                 </div>
             </div>
             <!-- D.o.B & Gender -->
@@ -61,14 +61,14 @@
                 </div>
                 <div class="col">
                     <label for="">Date of Birth</label>
-                    <input type="date" class="form-control" placeholder="D.o.B">            
+                    <input name="dob" type="date" class="form-control" placeholder="D.o.B">            
                 </div>            
             </div>
             <!-- Marital Status -->
             <div class="form-group">
 			    <label for="marital_status" class="control-label">Marital status</label>
 			    <div class="col-sm-12">
-			    	<select class="form-control" id="marital_status" name="marital_status" required>
+			    	<select class="form-control" id="marital_status" name="merital_status" required>
 			    		<option value="">Please make a choice</option>
 			    		<option value="Single">Single</option>
 			    		<option value="Cohabitation">Cohabitation</option>
@@ -82,19 +82,19 @@
             <div class="row g-3">
                 <div class="col-md-6">
                   <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="username@gmail.com">
+                  <input name="Email_Address" type="email" class="form-control" id="inputEmail4" placeholder="username@gmail.com">
                 </div>
                 <div class="col-md-6">
                   <label for="inputtelno">Telephone Number</label>                  
-                  <input type="number" class="form-control" id="inputtelno" placeholder="745548093">
+                  <input name="tel-no" type="number" class="form-control" id="inputtelno" placeholder="745548093">
                 </div>
                 <div class="col-md-6">
                   <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Kalimoni-Juja">
+                  <input name="address" type="text" class="form-control" id="inputAddress" placeholder="Kalimoni-Juja">
                 </div>
                 <div class="col-md-6">
                   <label for="inputID">National ID</label>
-                  <input type="number" class="form-control" id="inputID" placeholder="37778819">
+                  <input name="n-id" type="number" class="form-control" id="inputID" placeholder="37778819">
                 </div> 
             </div>
         <hr>
@@ -117,7 +117,7 @@
                     <div class="form-group mb-2">
 		                <label for="departmnet" class=" control-label">Department</label>
 		                <div class="col-sm-12">
-		                	<select class="form-control" id="departmnet" name="departmnet">
+		                	<select class="form-control" id="departmnet" name="departments">
 		                		<option value="">Choose your department</option>
 		                		<option value="Accounting">Accounting</option>
 		                		<option value="HR">HR</option>
@@ -136,12 +136,7 @@
 		        	</div>							
 		        </div>
 		    </div>
-            <div class="form-group mb-2">
-			    <label for="photo" class="col-sm-2 control-label">Profile Picture</label>
-			    <div class="col-sm-12">
-			    	<input type="file" class="form-control" id="photo" name="photo" accept="image/*" placeholder="Photograph" required style="height:auto" />						  	
-			    </div>
-		    </div>
+            
         <hr>
             <!-- Account Details -->
             <div class="row">
@@ -162,7 +157,7 @@
                 <div class="col">
                     <div class="form-group mb-2">
                         <label for="kra">KRA Pin</label>                  
-                        <input type="text" class="form-control" id="kra" placeholder="745548093">
+                        <input name="kra" type="text" class="form-control" id="kra" placeholder="745548093">
                     </div>
                 </div>
             </div>
@@ -190,18 +185,12 @@
         <hr>
             <!-- Username & Password -->
             <div class="row g-3 mb-3">
-                <div class="col">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby>
-                </div>
+                
                 <div class="col">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input name="emp_password" type="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <div class="col">
-                    <label for="confirm_passowrd">Confirm password</label>
-                    <input type="password" class="form-control" id="confirm_passowrd">
-                </div>
+                
             </div>
         <hr>
             <!-- Submit -->

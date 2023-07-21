@@ -1,3 +1,6 @@
+<?php 
+include('../connect.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +39,11 @@
         <!-- Aside Bar -->
         <aside>
             <div class="aside-title">
-                <a href="admin-home.html"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <a href="admin-home.php"><i class="fa-solid fa-house"></i>Dashboard</a>
             </div>
             <ul class="aside-list">
                 <li><a href="employee.html"><i class="fa-solid fa-people-group"></i>Staff Members</a></li>
-                <li><a href="departments.html"><i class="fa-solid fa-network-wired"></i>Departments</a></li>
+                <li><a href="admin-home.php?departments"><i class="fa-solid fa-network-wired"></i>Departments</a></li>
                 <li><a href="payroll.html"><i class="fa-solid fa-landmark"></i>Payroll</a></li>
                 <li><a href="allowance.html"><i class="fa-solid fa-sack-dollar"></i>Allowances</a></li>
                 <li><a href="deductions.html"><i class="fa-solid fa-cash-register"></i>Deductions</a></li>
@@ -51,7 +54,7 @@
         </aside>
         <!-- Admin Content -->
         <div class="admin-dashboard">
-            <div class="admin-welcome">
+            <!-- <div class="admin-welcome">
                 <h2>Welcome</h2>
             </div>
             <div class="admin-profile">
@@ -61,7 +64,14 @@
                 <h5>Catherine Devourax</h5>
                 <p>System Administrator</p>
                 <span>Jomo Kenyatta University</span>
-            </div>
+            </div> -->
+
+
+            <?php 
+            if(isset($_GET['departments'])){
+                include('departments.php');
+            }
+            ?>
         </div>
     </main>
     <!-- Footer -->
