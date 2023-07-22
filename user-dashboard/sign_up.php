@@ -15,6 +15,56 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
   </head>
 <body>
+
+<?php 
+include('../connect.php'); 
+include('staffIdGen.php'); 
+global $conn;
+// Add Employee to dB
+if(isset($_POST['btn-register'])){
+    $code = $_POST['code'];
+    $fname = $_POST['FirstName'];
+    $mname = $_POST['Middlename'];
+    $sname = $_POST['Surname'];
+    $gender = $_POST['gender'];
+    $dob = $_POST['dob'];
+    $mstatus = $_POST['marital_status'];
+    $email = $_POST['Email_Address'];
+    $telno = $_POST['tel-no'];
+    $address = $_POST['address'];
+    $n_id = $_POST['n-id'];
+    $emptype = $_POST['employment_type'];
+    $dept = $_POST['department'];
+    $djoin = $_POST['joining_date'];
+    $user = $_POST['username'];
+    $pwd= $_POST['cfmpswd'];
+    $harshpassword = password_hash($pwd,PASSWORD_DEFAULT);
+    
+
+    // Check whether the user with same name exist or not in database
+    $emp_check = "Select * from `employees` where code='$code'";
+    $emp_check = mysqli_query($conn,$emp_check);
+    $number=mysqli_num_rows( $emp_check);    
+    if($number>0){
+    echo "<script>alert('User already exists')</script>";    
+    }else{
+        // Add user to the table
+        $add_emp = "insert into `employees` (code,fname,mname,sname,gender,dob,marital_status,email,
+        tel_no,address,n_id,emp_type,dept,date_join) values ('$code','$fname','$mname','$sname','$gender',
+        '$dob','$mstatus','$email','$telno','$address','$n_id','$emptype','$dept','$djoin')";
+        $result_user = mysqli_query($conn,$add_emp);
+        if($result_user){
+          echo "<script>alert('User registered successfully!')</script>";
+          echo "<script>window.open('../index.php','_self')</script>";
+        }
+    }
+    $credentials = "insert into `employee_login` (username,password) values ('$user','$harshpassword')";
+    $result_credential = mysqli_query($conn,$credentials);
+    
+
+}
+
+?>
     <!-- University Logo -->
     <div class="company-logo scale-in-center">
       <img src="../images/logo-symbol.png" alt="">
@@ -29,11 +79,20 @@
 			<span class="text-red">*All fields are mandatory</span>
 		</div>
     </div>
+
     <!-- Registration Form -->
     <div class="reg-form">
-        <form action="registration2.php" method="post">
+        <form action="" method="post">
         <hr class="divider">
-            <!-- Full Names -->
+            <div class="form-group mb-2">
+		        <label for="code" class="control-label">Code</label>
+		        <div class="col-sm-12">
+		        	<div class="input-group">
+		        		<input type="text" class="form-control" id="" name="code" required />		        		
+		        	</div>							
+		        </div>
+		    </div>
+            <!-- Full Names -->            
             <div class="row g-3 mb-2">
                 <div class="col">
                     <label for="First Name">First Name</label>
@@ -68,7 +127,7 @@
             <div class="form-group">
 			    <label for="marital_status" class="control-label">Marital status</label>
 			    <div class="col-sm-12">
-			    	<select class="form-control" id="marital_status" name="merital_status" required>
+			    	<select class="form-control" id="marital_status" name="marital_status" required>
 			    		<option value="">Please make a choice</option>
 			    		<option value="Single">Single</option>
 			    		<option value="Cohabitation">Cohabitation</option>
@@ -117,7 +176,7 @@
                     <div class="form-group mb-2">
 		                <label for="departmnet" class=" control-label">Department</label>
 		                <div class="col-sm-12">
-		                	<select class="form-control" id="departmnet" name="departments">
+		                	<select class="form-control" id="departmnet" name="department">
 		                		<option value="">Choose your department</option>
 		                		<option value="Accounting">Accounting</option>
 		                		<option value="HR">HR</option>
@@ -135,8 +194,7 @@
 		        		
 		        	</div>							
 		        </div>
-		    </div>
-            
+		    </div>            
         <hr>
             <!-- Account Details -->
             <div class="row">
@@ -185,17 +243,23 @@
         <hr>
             <!-- Username & Password -->
             <div class="row g-3 mb-3">
-                
+                <div class="col">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control" id="username" aria-describedby>
+                </div>
                 <div class="col">
                     <label for="exampleInputPassword1">Password</label>
-                    <input name="emp_password" type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" name="pswd" class="form-control" id="exampleInputPassword1">
                 </div>
-                
+                <div class="col">
+                    <label for="confirm_passowrd">Confirm password</label>
+                    <input type="password" name="cfmpswd" class="form-control" id="confirm_passowrd">
+                </div>
             </div>
         <hr>
             <!-- Submit -->
             <div class="submit-btn">
-                <button type="submit" class="btn btn-success">Register</button>
+                <button type="submit" name="btn-register" class="btn btn-success">Register</button>
             </div>
     </form>
     </div>

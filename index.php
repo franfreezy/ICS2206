@@ -17,28 +17,27 @@
 <body>
     <?php  
     require('connect.php'); 
+    global $conn;
     session_start();
+    if(isset($_POST['btn-signin'])){
+  $username = $_POST['user_username'];  
+  $userpassword = $_POST['userpassword'];
+  
 
-    $email= isset($_POST['email']) ? $_POST['email'] : ''; 
-    $pass  = isset($_POST['password']) ? $_POST['password'] : ''; 
-    echo $email;
-
-    $employee= "SELECT * FROM `employee_login` WHERE EMAIL = '$email'";
-    $db_query  = mysqli_query($conn,$employee);
-    $row = mysqli_num_rows($db_query);
-    $assoc = mysqli_fetch_assoc($db_query);
-
-    if ($row>0){
-        if (password_verify($pass,$assoc['PASSWORD'])){
-            $user = $assoc['PASSWORD'];
-            // echo "<script>alert('Welcome $user')</script>";
-            header("Location:registration_user.php");
-        }else{
-            echo "<script>alert('Incorrect Login Details')</script>";
-            echo "<script>window.open('index.php','_self')</script>";
-            // header("Location:index.php");
-        }
+  //select data from dB
+  $select_query = "Select * from `employee_login` where username='$username'";
+  $result_select = mysqli_query($conn,$select_query);
+  $row  = mysqli_num_rows($result_select);
+  $array = mysqli_fetch_assoc($result_select);
+  if($row>0){
+    if (password_verify($userpassword,$array['password'])){
+        echo "<script>alert('Welcome $username')</script>";
+        echo "<script>window.open('user-dashboard/user-home.php','_self')</script>";
+    }else{
+        echo "<script>alert('Incorrect Password')</script>";
     }
+}  
+  }
     ?>
     <!-- Company Name & Logo -->
     <div class="main-section">
@@ -76,7 +75,7 @@
                                 <input type="submit" name="btn-signin" id="signin" class="btn solid" value="Sign In">                
                                 <div class="d-flex">
                                     <p class="mx-1">Don't have an account yet? </p>
-                                    <a href="sign_up.php"> Sign Up</a>
+                                    <a href="user-dashboard/sign_up.php"> Sign Up</a>
                                 </div>
                             </form>
                         </div>

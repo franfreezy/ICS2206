@@ -1,5 +1,16 @@
 <?php 
 include('../connect.php');
+if(isset($_SESSION['username'])){
+    $user_session = $_SESSION['username'];
+    $select = "Select * from  `employees` where username = '$user_session'";
+    $result = mysqli_query($conn,$select);
+    $row_fetch = mysqli_fetch_assoc($result);
+    $user_id = $row_fetch['code']; 
+    $username = $row_fetch['fname']; 
+    $useremail = $row_fetch['email'];  
+    $useraddress = $row_fetch['address']; 
+    $usermobile= $row_fetch['tel_no'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +48,7 @@ include('../connect.php');
                 <div class="row g-3 mb-2">
                     <div class="col">
                         <label for="First Name">First Name</label>
-                        <input type="text" class="form-control" name="fname" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control" name="fname" value="<?php $username ?>" placeholder="First name" aria-label="First name">
                     </div>
                     <div class="col">
                         <label for="Last Name">Last Name</label>
