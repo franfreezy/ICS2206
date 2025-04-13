@@ -78,6 +78,11 @@
                                     <a href="user-dashboard/sign_up.php"> Sign Up</a>
                                     
                                 </div>
+                                <div className="flex items-center my-4 w-full max-w-md">
+                                    <div className="flex-1 border-t border-gray-300"></div>
+                                    <span className="px-4 text-gray-200">Or</span>
+                                    <div className="flex-1 border-t border-gray-300"></div>
+                                 </div>
                                 <a href="admin-dashboard/admin-index.php"> Admin</a>
                             </form>
                         </div>
