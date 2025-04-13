@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Savannah Agile Solutions</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 <body>
     <?php  
@@ -78,12 +79,12 @@
                                     <a href="user-dashboard/sign_up.php"> Sign Up</a>
                                     
                                 </div>
-                                <div className="flex items-center my-4 w-full max-w-md">
-                                    <div className="flex-1 border-t border-gray-300"></div>
-                                    <span className="px-4 text-gray-200">Or</span>
-                                    <div className="flex-1 border-t border-gray-300"></div>
+                                <div class="flex items-center my-4 w-full max-w-md">
+                                    <div class="flex-1 border-t border-gray-300"></div>
+                                    <span class="px-4 text-gray-200">Or</span>
+                                    <div class="flex-1 border-t border-gray-300"></div>
                                  </div>
-                                <a href="admin-dashboard/admin-index.php"> Admin</a>
+                                <a href="admin-dashboard/admin-index.php"> Click to log in as Admin</a>
                             </form>
                         </div>
                     </div>
