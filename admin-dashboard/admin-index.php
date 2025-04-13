@@ -76,7 +76,7 @@ if(isset($_POST['btn-signin'])){
                                 <input type="submit" name="btn-signin" id="signin" class="btn solid" value="Sign In">                
                                 <div class="d-flex">
                                     <p class="mx-1">Don't have an account yet? </p>
-                                    <a href="admin-register.php"> Sign Up</a>
+                                    <a href="http://www.smartbaby.ct.ws/admin-dashboard/admin-register.php"> Sign Up</a>
                                 </div>
                             </form>
                         </div>

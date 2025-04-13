@@ -42,14 +42,13 @@ include('../connect.php')
                 <a href="admin-home.php"><i class="fa-solid fa-house"></i>Dashboard</a>
             </div>
             <ul class="aside-list">
-                <li><a href="employee.html"><i class="fa-solid fa-people-group"></i>Staff Members</a></li>
+                <li><a href="admin-home.php?employee"><i class="fa-solid fa-people-group"></i>Staff Members</a></li>
+
                 <li><a href="admin-home.php?departments"><i class="fa-solid fa-network-wired"></i>Departments</a></li>
-                <li><a href="payroll.html"><i class="fa-solid fa-landmark"></i>Payroll</a></li>
+                
                 <li><a href="admin-home.php?allowance"><i class="fa-solid fa-sack-dollar"></i>Allowances</a></li>
-                <li><a href="deductions.html"><i class="fa-solid fa-cash-register"></i>Deductions</a></li>
-                <li><a href="#"><i class="fa-solid fa-file-invoice"></i>Audit Trail</a></li>
-                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Reports</a></li>
-                <li><a href="#"><i class="fa-solid fa-user-group"></i>Users</a></li>
+                <li><a href="admin-home.php?deductions"><i class="fa-solid fa-cash-register"></i>Deductions</a></li>
+                <li><a href="admin-home.php?payroll"><i class="fa-solid fa-file-invoice-dollar"></i>Payroll</a></li>
             </ul>
         </aside>
         <!-- Admin Content -->
@@ -73,6 +72,15 @@ include('../connect.php')
             }
             if(isset($_GET['allowance'])){
                 include('allowance.php');
+            }
+            if(isset($_GET['employee'])){
+                include('employee.php');
+            }
+            if(isset($_GET['payroll'])){
+                include('payroll.php');
+            }
+            if(isset($_GET['deductions'])){
+                include('deductions.php');
             }
             ?>
         </div>

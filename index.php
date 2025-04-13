@@ -76,7 +76,9 @@
                                 <div class="d-flex">
                                     <p class="mx-1">Don't have an account yet? </p>
                                     <a href="user-dashboard/sign_up.php"> Sign Up</a>
+                                    
                                 </div>
+                                <a href="admin-dashboard/admin-index.php"> Admin</a>
                             </form>
                         </div>
                     </div>

@@ -37,6 +37,7 @@ if(isset($_POST['btn-signup'])){
     $result = mysqli_query($conn,$insert_query);
     if($result){
       echo "<script>alert('User added successfully')</script>";
+      echo "<script>window.open('http://www.smartbaby.ct.ws/admin-dashboard/admin-index.php','_self')</script>";
     }
   }  
 }
@@ -75,7 +76,7 @@ if(isset($_POST['btn-signup'])){
                                 <input type="submit" name="btn-signup" id="signin" class="btn solid" value="Sign Up">                
                                 <div class="d-flex">
                                     <p class="mx-1">Already have an account? </p>
-                                    <a href="admin-index.php"> Sign In</a>
+                                    <a href="http://www.smartbaby.ct.ws/admin-dashboard/admin-index.php"> Sign In</a>
                                 </div>
                             </form>
                         </div>
